@@ -1,0 +1,33 @@
+package in.ineuron.comp;
+import java.util.Date;
+
+//target
+public class WishMessageGenerator {
+	
+	//dependent
+	private Date date;
+	static {
+		System.out.println("WishMessageGenerator.class is loading....");
+	}
+	
+	public WishMessageGenerator() {
+		System.out.println("WishMessageGenerator object is instaintiated...");
+	}
+	public WishMessageGenerator(Date date) {
+		this.date=date;
+		System.out.println("Parameterized constructor has called and constructor Injection happens");
+		System.out.println(this);
+	}
+	
+	public void setDate(Date date) {
+		this.date=date;
+		System.out.println("Setter method called for setter Injection:");
+		System.out.println(this);
+	}
+
+	public String toString() {
+		return "WishMessageGenerator [date=" + date + "]";
+	}
+	
+
+}

@@ -1,0 +1,34 @@
+package in.ineuron.test;
+
+import java.io.IOException;
+import java.util.Arrays;
+
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+import in.ineuron.comp.WishMessageGenerator;
+
+public class TestApp {
+
+	public static void main(String[] args) throws IOException {
+		
+
+		System.out.println("***********ApplicationContext container starting************");
+		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext("in/ineuron/cfg/applicationContext.xml");
+		System.out.println("The no of bean is: "+factory.getBeanDefinitionCount());
+		System.out.println("The Beans are: "+Arrays.toString(factory.getBeanDefinitionNames()));
+		System.out.println("***********ApplicationContext container started*************");
+		
+		WishMessageGenerator bean = factory.getBean("wmg",WishMessageGenerator.class);
+		System.out.println("After Injection:"+bean);
+		
+		factory.close();
+		System.out.println("*******Container is closing**********");
+		
+		
+	
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package in.ineuron.comp;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		
+		WishMessageGenerator wm=new WishMessageGenerator();
+		wm.generateMessage("Anupam");
+	}
+
+}

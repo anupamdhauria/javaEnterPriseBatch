@@ -1,0 +1,10 @@
+package in.ineuron.test;
+
+public class SetterInjection {
+
+	public static void main(String[] args) {
+		
+	
+	}
+
+}

@@ -1,0 +1,21 @@
+package in.ineuron.test;
+
+import in.ineuron.comp.WishMessageGenerator;
+
+public class UsingCoreJava {
+
+	public static void main(String[] args) {
+		
+		
+		java.util.Date date=new java.util.Date();
+		WishMessageGenerator wm=new WishMessageGenerator(date);
+		System.out.println("Before setter injection:"+wm);
+		
+	
+		System.out.println("After Setter Injection :"+wm);
+		
+		String msg=wm.generateMessage("Anupam");
+		System.out.println(msg);
+	}
+
+}

@@ -1,0 +1,15 @@
+package in.ineuron.test;
+
+import org.springframework.core.io.FileSystemResource;
+
+public class SetterInjection {
+
+	public static void main(String[] args) {
+		
+		FileSystemResource resource=new FileSystemResource("src/in/ineuron/cf/applicationContext.xml");
+		
+	
+		
+	}
+
+}
