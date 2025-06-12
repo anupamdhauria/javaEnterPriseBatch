@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mySqlDAO"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/enterprisebatch" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+	
+	<bean id="customerDao" class="in.ineuron.dao.CustomerMySqlDAOImpl">
+		<constructor-arg name="dataSource" ref="mySqlDAO"/>
+	</bean>
+	
+	<bean id="customerService" class="in.ineuron.service.CustomerMgmntServiceImpl">
+		<constructor-arg name="dao" ref="customerDao"/>
+	</bean>
+	
+	<bean id="customerController" class="in.ineuron.controller.MainController">
+		<constructor-arg name="service" ref="customerService"/>
+	</bean>
+	
+</beans>

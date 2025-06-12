@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import in.ineuron.controller.MainController;
 import in.ineuron.vo.CustomerVO;
@@ -39,19 +38,19 @@ public class TestApp {
 		customerVO.setRate(rate);
 		customerVO.setTime(time);
 
-		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext(
-				"/in/ineuron/cfg/applicationContext.xml");
-
+		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
+		reader.loadBeanDefinitions("/in/ineuron/cfg/applicationContext.xml");
 		System.out.println("**************Container Started******************");
 
 		System.in.read();
 
 		MainController controller = factory.getBean("customerController", MainController.class);
-
+		
 		try {
 			String result = controller.processController(customerVO);
 			System.out.println(result);
-		} catch (Exception e) {
+		}catch(Exception e) {
 			System.out.println("Problem occur! please try again");
 		}
 		System.out.println("\n************Container Stopped***************");
