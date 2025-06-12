@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Type Wise -->
+	<bean id="stud1" class="in.ineuron.comp.Student">
+		<constructor-arg type="java.lang.Integer" value="10"></constructor-arg>
+		<constructor-arg type="java.lang.String"
+			value="sachin"></constructor-arg>
+		<constructor-arg type="java.lang.Integer" value="45"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="MI"></constructor-arg>
+		<constructor-arg type="java.lang.Float" value="89.5f"></constructor-arg>
+	</bean>
+
+
+	<!-- Index wise -->
+	<bean id="stud2" class="in.ineuron.comp.Student">
+		<constructor-arg index="0" value="7"></constructor-arg>
+		<constructor-arg index="3" value="CSK"></constructor-arg>
+		<constructor-arg index="1" value="dhoni"></constructor-arg>
+		<constructor-arg index="4" value="59.5f"></constructor-arg>
+		<constructor-arg index="2" value="40"></constructor-arg>
+	</bean>
+
+
+	<!-- Name Wise -->
+	<bean id="stud3" class="in.ineuron.comp.Student">
+		<constructor-arg name="smarks" value="90.5f"></constructor-arg>
+		<constructor-arg name="sid" value="18"></constructor-arg>
+		<constructor-arg name="sname" value="kohli"></constructor-arg>
+		<constructor-arg name="saddress" value="RCB"></constructor-arg>
+		<constructor-arg name="sage" value="36"></constructor-arg>
+	</bean>
+</beans>
