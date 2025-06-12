@@ -33,4 +33,12 @@
 		<constructor-arg name="saddress" value="RCB"></constructor-arg>
 		<constructor-arg name="sage" value="36"></constructor-arg>
 	</bean>
+	
+	<bean id="stud4" class="in.ineuron.comp.Student">
+		<constructor-arg name="smarks"  type="java.lang.Float" value="43.3f" index="4"></constructor-arg>
+		<constructor-arg name="sid" type="java.lang.Integer" value="9" index="0"></constructor-arg>
+		<constructor-arg name="sname" type="java.lang.String" value="warner" index="1"></constructor-arg>
+		<constructor-arg name="saddress" type="java.lang.String" value="DC" index="3"></constructor-arg>
+		<constructor-arg name="sage" type="java.lang.Integer" value="38" index="2"></constructor-arg>
+	</bean>
 </beans>
