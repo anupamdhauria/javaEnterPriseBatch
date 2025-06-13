@@ -5,7 +5,8 @@ import java.util.Arrays;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import in.ineuron.comp.PersonInfo;
+import in.ineuron.comp.Car;
+
 
 
 public class TestApp {
@@ -21,8 +22,11 @@ public class TestApp {
 		System.out.println("Bean id is :: " + Arrays.toString(factory.getBeanDefinitionNames()));
 
 	
-		PersonInfo personInfo = factory.getBean("personInfo",PersonInfo.class);
-		System.out.println(personInfo);
+		Car car1 = factory.getBean("car1",Car.class);
+		System.out.println(car1);
+		
+		Car car2 = factory.getBean("car2",Car.class);
+		System.out.println(car2);
 	
 		factory.close();
 		System.out.println("\n*********Container stopped**********");

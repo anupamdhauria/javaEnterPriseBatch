@@ -4,18 +4,26 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="dojoing" class="java.util.Date">
-		<property name="year" value="96" />
-		<property name="month" value="1" />
-		<property name="date" value="23" />
+	<bean id="baseCar" class="in.ineuron.comp.Car" abstract="true">
+		<property name="model" value="swift" />
+		<property name="company" value="suzuki" />
+		<property name="type" value="hutchback" />
+		<property name="fuelType" value="diesel" />
+		<property name="engineCC" value="12000" />
 	</bean>
-	<bean id="personInfo" class="in.ineuron.comp.PersonInfo">
-		<constructor-arg name="pid" value="10"></constructor-arg>
-		<constructor-arg name="pname" value="kohli"></constructor-arg>
-		<constructor-arg name="paddress" value="RCB"></constructor-arg>
-		<constructor-arg name="dob"><null/></constructor-arg>
-		<constructor-arg name="dom"><null/></constructor-arg>
-		<constructor-arg name="doj" ref="dojoing"></constructor-arg>
+	
+	<bean id="car1" class="in.ineuron.comp.Car" parent="baseCar" >
+		<property name="regNo" value="JH05B87654"/>
+		<property name="engineNo" value="5543456" />
+		<property name="color" value="white" />
+		<property name="owner" value="anupam" />
+	</bean>
+
+	<bean id="car2" class="in.ineuron.comp.Car" parent="baseCar">
+		<property name="regNo" value="JH05B9867" />
+		<property name="engineNo" value="5543245" />
+		<property name="color" value="red" />
+		<property name="owner" value="ayushi" />
 	</bean>
 
 </beans>
