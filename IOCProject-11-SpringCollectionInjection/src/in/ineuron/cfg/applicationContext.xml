@@ -4,16 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="marksInfo" class="in.ineuron.comp.MarksInfo">
-		<property name="marks">
-			<array>
-				<value>100</value>
-				<value>80</value>
-				<value>75</value>
-				<value>90</value>
-				<value>55</value>
-			</array>
-		</property>
-	</bean>
+	<import resource="array-bean.xml" />
+	<import resource="list-bean.xml" />
+	<import resource="set-bean.xml" />
+	<import resource="map-bean.xml" />
+	<import resource="properties-bean.xml" />
 
 </beans>

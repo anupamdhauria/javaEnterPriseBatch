@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="sysDate" class="java.util.Date" />
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="93" />
+		<property name="month" value="0" />
+		<property name="date" value="03" />
+	</bean>
+
+	<bean id="marksInfo" class="in.ineuron.comp.MarksInfo">
+		<property name="marks">
+			<array>
+				<value>100</value>
+				<value>80</value>
+				<value>75</value>
+				<value>90</value>
+				<value>55</value>
+			</array>
+		</property>
+	</bean>
+
+	
+
+</beans>
