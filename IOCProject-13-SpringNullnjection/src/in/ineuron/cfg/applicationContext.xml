@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dojoing" class="java.util.Date">
+		<property name="year" value="96" />
+		<property name="month" value="1" />
+		<property name="date" value="23" />
+	</bean>
+	<bean id="personInfo" class="in.ineuron.comp.PersonInfo">
+		<constructor-arg name="pid" value="10"></constructor-arg>
+		<constructor-arg name="pname" value="kohli"></constructor-arg>
+		<constructor-arg name="paddress" value="RCB"></constructor-arg>
+		<constructor-arg name="dob"><null/></constructor-arg>
+		<constructor-arg name="dom"><null/></constructor-arg>
+		<constructor-arg name="doj" ref="dojoing"></constructor-arg>
+	</bean>
+
+</beans>
