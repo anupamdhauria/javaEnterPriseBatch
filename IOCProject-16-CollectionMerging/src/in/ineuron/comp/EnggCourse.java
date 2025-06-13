@@ -14,6 +14,11 @@ public class EnggCourse {
 	public String toString() {
 		return "EnggCourse [subjects=" + subjects + "]";
 	}
+
+	public EnggCourse(Set<String> subjects) {
+		System.out.println("1 param constructor");
+		this.subjects = subjects;
+	}
 	
 	
 }

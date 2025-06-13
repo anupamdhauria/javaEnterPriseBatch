@@ -6,7 +6,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-
+<!--  
 	<bean id="firstYear" class="in.ineuron.comp.EnggCourse" abstract="true">
 		<property name="subjects">
 			<set>
@@ -24,6 +24,26 @@
 				<value>JAVA</value>
 			</set>
 		</property>
+	</bean>
+	-->
+	
+	<bean id="firstYear" class="in.ineuron.comp.EnggCourse" abstract="true">
+		<constructor-arg name="subjects">
+			<set>
+				<value>C</value>
+				<value>DM</value>
+				<value>DBMS</value>
+			</set>
+		</constructor-arg>
+	</bean>
+	<bean id="CS" class="in.ineuron.comp.EnggCourse" parent="firstYear">
+		<constructor-arg name="subjects">
+			<set merge="true">
+				<value>OS</value>
+				<value>OOPS</value>
+				<value>JAVA</value>
+			</set>
+		</constructor-arg>
 	</bean>
 
 </beans>
