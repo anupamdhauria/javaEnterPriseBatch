@@ -7,8 +7,11 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
-	<import resource="persistance-beans.xml" />
+
 	<import resource="service-beans.xml" />
-	<import resource="controller-beans.xml" />
+	<bean id="customerController"
+		class="in.ineuron.controller.MainController">
+		<constructor-arg name="service" ref="customerService" />
+	</bean>
 
 </beans>

@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=RealTime-DI-Approch/src&lt;in.ineuron.comp{Courier.java[Courier" modifiers="513" timestamp="1749700595666"/>
+    <typeInfo handle="=IOCProject-06-RealTimeDI-UsingXML/src&lt;in.ineuron.service{ICustomerMgmntService.java[ICustomerMgmntService" modifiers="513" timestamp="1749718624136"/>
+    <typeInfo handle="=IOCProject-06-RealTimeDI-UsingXML/src&lt;in.ineuron.dao{ICustomerDAO.java[ICustomerDAO" modifiers="513" timestamp="1749718593658"/>
+</typeInfoHistroy>
