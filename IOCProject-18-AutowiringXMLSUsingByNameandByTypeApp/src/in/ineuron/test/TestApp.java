@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import in.ineuron.comp.FlipKart;
 
-public class UsingApplicationContext {
+public class TestApp {
 
 	public static void main(String[] args) throws IOException {
 	
