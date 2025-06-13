@@ -3,14 +3,21 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-
+ <!--  
 	<bean id="fFlight" class="in.ineuron.comp.FirstFlight" primary="true" />
 	<bean id="bDart" class="in.ineuron.comp.BlueDart"/>
 	<bean id="courier" class="in.ineuron.comp.DTDC" />
 
+-->
 
-	<bean id="flipkart" class="in.ineuron.comp.FlipKart" autowire="constructor">
+<bean id="fFlight" class="in.ineuron.comp.FirstFlight" autowire-candidate="false" />
+	<bean id="bDart" class="in.ineuron.comp.BlueDart" autowire-candidate="false"/>
+	<bean id="dtdc" class="in.ineuron.comp.DTDC" />
+	
+	
+	<bean id="flipkart" class="in.ineuron.comp.FlipKart" autowire="no">
 		<constructor-arg name="discount" value="25f" />
+		<constructor-arg name="courier" ref="bDart"/>
 	</bean>
 	
 </beans>
