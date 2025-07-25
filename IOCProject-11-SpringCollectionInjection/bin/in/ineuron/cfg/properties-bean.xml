@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sysDate" class="java.util.Date" />
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="93" />
+		<property name="month" value="0" />
+		<property name="date" value="03" />
+	</bean>
+
+
+	<bean id="ipl" class="in.ineuron.comp.IplInfo">
+
+		
+		<property name="iplInfo">
+			<props>
+				<prop key="CSK">dhoni</prop>
+				<prop key="RCB">kohli</prop>
+				<prop key="DC">rahul</prop>
+				<prop key="MI">rohit</prop>
+				<prop key="LSG">pant</prop>
+			</props>
+		</property>
+
+
+	</bean>
+
+</beans>

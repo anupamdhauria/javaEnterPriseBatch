@@ -1,8 +1,0 @@
-package in.ineuron.comp;
-import java.util.Date;
-public class WishMessage {
-	
-	private Date date;
-	
-
-}
