@@ -41,7 +41,7 @@ public class PurchaseOrderImpl implements IPurchaseOrder {
 		MimeMessage message = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message,true);
 	    helper.setFrom(fromEmail);
-	    helper.setCc(toEmails);
+	    helper.setTo(toEmails);
 	    helper.setSubject("test message");
 	    helper.setSentDate(new Date());
 	    helper.setText(msg);
