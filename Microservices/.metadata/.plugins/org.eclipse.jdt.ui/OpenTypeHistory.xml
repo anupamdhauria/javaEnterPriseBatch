@@ -4,4 +4,5 @@
     <typeInfo handle="=Stock-Service/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.service{IStockPriceService.java[IStockPriceService" modifiers="513" timestamp="1761807718401"/>
     <typeInfo handle="=Stock-Service/C:\/Program Files\/Java\/jdk-17\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(Runtime.class[Runtime" modifiers="33" timestamp="1745646830695"/>
     <typeInfo handle="=Stock-Service/C:\/Program Files\/Java\/jdk-17\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1745646830695"/>
+    <typeInfo handle="=Stock-UI-App/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ineuron.service{IStockService.java[IStockService" modifiers="513" timestamp="1761881117106"/>
 </typeInfoHistroy>
