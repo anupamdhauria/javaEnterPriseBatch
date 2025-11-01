@@ -1,0 +1,13 @@
+demo:
+  properties:
+    greetMsg: "Hieee, Good Morning"
+    testMsg: "This is test Msg"
+    welcomeMsg: "Welcome to iNeuron"
+  props:
+    greetMsg: "Hieee, Good Afternoon"
+    testMsg: "This is test Msg22"
+    welcomeMsg: "Welcome to iNeuron Intellegence"
+
+server:
+  port: 9999
+
