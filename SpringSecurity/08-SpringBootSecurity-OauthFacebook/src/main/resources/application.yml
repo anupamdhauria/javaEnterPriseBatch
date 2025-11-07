@@ -1,0 +1,14 @@
+server:
+  port: 9999
+  
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+         facebook:
+          clientId: 
+          clientSecret: 
+          scope:
+           - email
+           - public_profile
