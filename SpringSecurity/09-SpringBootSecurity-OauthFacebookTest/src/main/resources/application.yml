@@ -9,6 +9,4 @@ spring:
          facebook:
           clientId: 
           clientSecret: 
-          scope:
-           - email
-           - public_profile
+         

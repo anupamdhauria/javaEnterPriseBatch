@@ -7,8 +7,6 @@ spring:
       client:
         registration:
          facebook:
-          clientId: 
-          clientSecret: 
-          scope:
-           - email
-           - public_profile
+          clientId:
+          clientSecret:
+         
