@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: in.ineuron.test.TestBankLoanService
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 10.225 s - in in.ineuron.test.TestBankLoanService
