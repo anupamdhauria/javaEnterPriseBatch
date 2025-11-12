@@ -1,0 +1,36 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<h1 style="color: blue; text-align: center">Login Page</h1>
+
+<form th:action="@{/login}" method="POST">
+	<table border="0" bgcolor="cyan" align="center">
+		<tr>
+			<td>username ::</td>
+			<td><input type="text" name="username" /></td>
+		</tr>
+		<tr>
+			<td>password ::</td>
+			<td><input type="password" name="password" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Login"></td>
+			<td><input type="reset" value="cancel"></td>
+		</tr>
+	</table>
+	<input type="hidden" th:if="${_csrf != null}"
+		th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+	<p>
+		CSRF Token: <span th:text="${_csrf.token}"></span>
+	</p>
+	<p>
+		Parameter Name: <span th:text="${_csrf.parameterName}"></span>
+	</p>
+	<p>
+		Header Name: <span th:text="${_csrf.headerName}"></span>
+	</p>
+
+	<span style="color: red; text-align: center" th:if="${param.error}">Invalid
+		Login details (authentication failed)</span> <span
+		style="color: red; text-align: center" th:if="${param.logout}">User
+		Logged successfully </span>
+</form>
