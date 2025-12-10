@@ -1,6 +1,7 @@
 package com.electronic.store.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,6 +16,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Builder
 @ToString
+@Entity
 public class Category {
 
 	@Id

@@ -1,6 +1,7 @@
 package com.electronic.store.services.impl;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import com.electronic.store.dtos.CategoryDto;
 import com.electronic.store.dtos.PageableResponse;
@@ -18,6 +20,7 @@ import com.electronic.store.helper.Helper;
 import com.electronic.store.repositories.CategoryRepository;
 import com.electronic.store.services.CategoryService;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
 	@Autowired
@@ -29,6 +32,8 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	public CategoryDto createCategory(CategoryDto categoryDto) {
 		
+		String categoryID = UUID.randomUUID().toString();
+		categoryDto.setCategoryId(categoryID);
 		Category category = mapper.map(categoryDto, Category.class);
 		categoryRepository.save(category);
 		return mapper.map(category, CategoryDto.class);

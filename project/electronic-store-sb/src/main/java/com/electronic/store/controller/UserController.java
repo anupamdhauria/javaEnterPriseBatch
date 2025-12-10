@@ -73,8 +73,7 @@ public class UserController {
 	public ResponseEntity<ApiResponseMessage> deleteUser(@PathVariable String userId) throws IOException {
 		UserDto user = userService.getUserById(userId);
 		String filePath=fileUploadPath+user.getImageName();
-		Path path=Paths.get(filePath);
-		Files.delete(path);
+		fileService.deleteFile(filePath);
 		
 		userService.deleteUser(userId);
 		ApiResponseMessage message = ApiResponseMessage.builder().message("User deleted Successfully!!").success(true)
