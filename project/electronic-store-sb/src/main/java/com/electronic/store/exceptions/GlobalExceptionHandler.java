@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.electronic.store.dtos.ApiResponseMessage;
+import com.electronic.store.dtos.FileResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -22,8 +23,6 @@ public class GlobalExceptionHandler {
 		ApiResponseMessage message = ApiResponseMessage.builder().message(ex.getMessage()).status(HttpStatus.NOT_FOUND).success(true).build();
 		return new ResponseEntity<>(message,HttpStatus.NOT_FOUND);
 	}
-	
-	
 
 	//handling api exception
 	@ExceptionHandler(MethodArgumentNotValidException.class)
@@ -41,4 +40,15 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
 
 	}
+	
+	//handle bad request api
+		@ExceptionHandler(BadApiRequestException.class)
+		public ResponseEntity<ApiResponseMessage>handleBadApiResponseException(BadApiRequestException ex){
+			
+			ApiResponseMessage message = ApiResponseMessage.builder()
+					.message(ex.getMessage())
+					.status(HttpStatus.BAD_REQUEST)
+					.success(false).build();
+			return new ResponseEntity<>(message,HttpStatus.BAD_REQUEST);
+		}
 }
