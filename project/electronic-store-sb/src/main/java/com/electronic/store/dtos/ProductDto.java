@@ -2,6 +2,9 @@ package com.electronic.store.dtos;
 
 import java.util.Date;
 
+import com.electronic.store.entities.Category;
+import com.electronic.store.validate.ImageNameValid;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
@@ -45,5 +48,7 @@ public class ProductDto {
 	
 	private boolean stock;
 	
+	
 	private String productImage;
+	private CategoryDto category;
 }
