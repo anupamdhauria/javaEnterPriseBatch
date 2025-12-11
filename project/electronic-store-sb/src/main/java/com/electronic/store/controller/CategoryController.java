@@ -23,7 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.electronic.store.dtos.ApiResponseMessage;
 import com.electronic.store.dtos.CategoryDto;
-import com.electronic.store.dtos.FileResponse;
+import com.electronic.store.dtos.ImageResponse;
 import com.electronic.store.dtos.PageableResponse;
 import com.electronic.store.services.CategoryService;
 import com.electronic.store.services.FileService;
@@ -104,12 +104,12 @@ public class CategoryController {
 	
 	//upload cover photo
 	@PostMapping("/images/{categoryId}")
-	public ResponseEntity<FileResponse> uploadCategoryPhoto(@RequestParam("categoryImage")MultipartFile file,@PathVariable String categoryId) throws IOException{
+	public ResponseEntity<ImageResponse> uploadCategoryPhoto(@RequestParam("categoryImage")MultipartFile file,@PathVariable String categoryId) throws IOException{
 		String fileName = fileService.uploadFile(file, fileUploadPath);
 		CategoryDto category = categoryService.getCategoryById(categoryId);
 		category.setCoverImage(fileName);
 		CategoryDto updateCategory = categoryService.updateCategory(category, categoryId);
-		FileResponse response=FileResponse.builder()
+		ImageResponse response=ImageResponse.builder()
 				.fileName(fileName)
 				.message("Cover Photo Uploaded Successfully!")
 				.status(HttpStatus.CREATED)

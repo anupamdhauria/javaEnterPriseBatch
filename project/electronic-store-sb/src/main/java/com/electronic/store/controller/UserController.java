@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.electronic.store.dtos.ApiResponseMessage;
-import com.electronic.store.dtos.FileResponse;
+import com.electronic.store.dtos.ImageResponse;
 import com.electronic.store.dtos.PageableResponse;
 import com.electronic.store.dtos.UserDto;
 import com.electronic.store.services.FileService;
@@ -118,14 +118,14 @@ public class UserController {
 	
 	//upload a file for user
 	@PostMapping("/image/{userid}")
-	public ResponseEntity<FileResponse> uploadUserImage(@RequestParam("userImage")MultipartFile file,@PathVariable("userid") String userId) throws IOException{
+	public ResponseEntity<ImageResponse> uploadUserImage(@RequestParam("userImage")MultipartFile file,@PathVariable("userid") String userId) throws IOException{
 		
 		String fileName = fileService.uploadFile(file, fileUploadPath);
 		logger.info("filename::{}",fileName);
 		UserDto user = userService.getUserById(userId);
 		user.setImageName(fileName);
 		UserDto updateUser = userService.updateUser(user, userId);
-		FileResponse response=FileResponse.builder()
+		ImageResponse response=ImageResponse.builder()
 				.fileName(fileName)
 				.message("Image uploaded successfully")
 				.status(HttpStatus.CREATED)

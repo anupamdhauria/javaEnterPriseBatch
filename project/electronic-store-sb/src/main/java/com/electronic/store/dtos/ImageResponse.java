@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FileResponse {
+public class ImageResponse {
 
 	private String message;
 	private String fileName;
